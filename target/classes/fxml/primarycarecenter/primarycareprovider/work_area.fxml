@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefWidth="1300.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+         <TableView fx:id="tblMyWorkQueue" layoutX="166.0" layoutY="66.0" prefHeight="200.0" prefWidth="967.0">
+          <columns>
+            <TableColumn fx:id="colMyQueueOriginatingNetwork" prefWidth="158.4000244140625" text="Originating Network" />
+            <TableColumn fx:id="colMyQueueOriginatingEnterprise" minWidth="0.0" prefWidth="160.0" text="Originating Enterprise" />
+              <TableColumn fx:id="colMyQueuePatientName" prefWidth="154.39996337890625" text="Patient Name" />
+              <TableColumn fx:id="colMyQueueSender" prefWidth="124.7999267578125" text="Sender" />
+              <TableColumn fx:id="colMyQueueSentOn" prefWidth="116.80010986328125" text="Sent On" />
+              <TableColumn fx:id="colMyQueueRequestType" prefWidth="129.60001220703123" text="Request Type" />
+              <TableColumn fx:id="colMyQueueStatus" prefWidth="119.99992675781255" text="Status" />
+          </columns>
+        </TableView>
+        <Button fx:id="btnProcess" layoutX="1077.0" layoutY="40.0" mnemonicParsing="false" onAction="#processRequest" text="Process" />
+   </children>
+</fx:root>

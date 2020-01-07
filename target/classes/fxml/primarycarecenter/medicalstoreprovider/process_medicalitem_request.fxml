@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="618.0" prefWidth="1300.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+     <Label alignment="CENTER" layoutX="434.0" layoutY="33.0" prefHeight="43.0" prefWidth="270.0" style="-fx-font-family: 'Segoe UI'; -fx-text-fill: #00A1FF;" text="SUPPLY MEDICAL ITEMS">
+         <font>
+             <Font size="24.0" />
+         </font>
+      </Label>
+     <Button fx:id="btnSupply" layoutX="862.0" layoutY="159.0" mnemonicParsing="false" onAction="#processSupplyRequest" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="Supply" />
+      <Button fx:id="btnRequestRestock" disable="true" layoutX="862.0" layoutY="109.0" mnemonicParsing="false" onAction="#enableRequestRestock" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="Request Restock" />
+      <ComboBox fx:id="comboNetworks" disable="true" layoutX="254.0" layoutY="430.0" prefHeight="26.0" prefWidth="206.0" promptText="Select One" />
+      <ComboBox fx:id="comboEnterprises" disable="true" layoutX="470.0" layoutY="430.0" prefHeight="26.0" prefWidth="206.0" promptText="Select One" />
+      <Label layoutX="258.0" layoutY="412.0" text="Network" />
+      <Label layoutX="470.0" layoutY="412.0" text="Digital Healthcare Enterprise" />
+      <ComboBox fx:id="comboOrganizations" disable="true" layoutX="687.0" layoutY="430.0" prefHeight="26.0" prefWidth="206.0" promptText="Select One" />
+      <Label layoutX="687.0" layoutY="412.0" text="Pharmacy" />
+      <Label layoutX="543.0" layoutY="384.0" text="SEND TO" />
+      <Separator layoutX="156.0" layoutY="400.0" prefHeight="5.0" prefWidth="825.0" />
+      <Button fx:id="btnSubmitRestockRequest" disable="true" layoutX="516.0" layoutY="505.0" mnemonicParsing="false" onAction="#processResupplyRequest" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="Submit" />
+      <TableView fx:id="tblMedicalItemsRequest" layoutX="261.0" layoutY="109.0" prefHeight="200.0" prefWidth="569.0">
+        <columns>
+          <TableColumn fx:id="colItemName" prefWidth="111.20001220703125" text="Item" />
+            <TableColumn fx:id="colItemType" prefWidth="131.2000732421875" text="Type" />
+          <TableColumn fx:id="colQuantityRequested" prefWidth="125.5999755859375" text="Quantity Requested" />
+            <TableColumn fx:id="colQuantityAvailable" prefWidth="112.79998779296875" text="Quantity Available" />
+            <TableColumn fx:id="colShortfall" prefWidth="92.79998779296875" text="Shortfall" />
+        </columns>
+      </TableView>
+   </children>
+</fx:root>

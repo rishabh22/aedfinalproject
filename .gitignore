@@ -1,0 +1,8 @@
+### IntelliJ ###
+/.idea/
+/ideaoutput/
+/*.iml
+
+/Databank.db4o
+
+/Logging.*

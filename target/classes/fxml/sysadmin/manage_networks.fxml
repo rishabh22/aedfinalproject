@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="603.0" prefWidth="1150.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnAddNetwork" defaultButton="true" layoutX="592.0" layoutY="91.0" mnemonicParsing="false" onAction="#addNetwork" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="Add" />
+      <TableView fx:id="tblNetwork" layoutX="306.0" layoutY="151.0" prefHeight="275.0" prefWidth="340.0">
+         <columns>
+            <TableColumn fx:id="colNetworkName" prefWidth="339.1999816894531" text="Name:" />
+         </columns>
+      </TableView>
+
+      <Button fx:id="btnSave" disable="true" layoutX="794.0" layoutY="270.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="64.0" style="-fx-text-fill: white; -fx-background-color: #0087D5;" text="Save" />
+      <TextField fx:id="txtName" layoutX="347.0" layoutY="92.0" prefHeight="26.0" prefWidth="219.0" promptText="Name" />
+      <TextField fx:id="txtNewName" disable="true" layoutX="711.0" layoutY="391.0" />
+      <Label layoutX="307.0" layoutY="96.0" text="ADD:" />
+      <Label layoutX="722.0" layoutY="246.0" text="UPDATE NETWORK:" />
+      <TextField fx:id="txtOrigName" disable="true" layoutX="711.0" layoutY="335.0" />
+      <Button fx:id="btnUpdate" disable="true" layoutX="711.0" layoutY="270.0" mnemonicParsing="false" onAction="#updateNetwork" prefHeight="26.0" prefWidth="64.0" style="-fx-text-fill: white; -fx-background-color: #0087D5;" text="Update" />
+      <Button fx:id="btnManageEnterprises" disable="true" layoutX="712.0" layoutY="151.0" mnemonicParsing="false" onAction="#manageEnterprises" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #0087D5; -fx-text-fill: WHITE;" text="Manage Enterprises" />
+      <Label layoutX="711.0" layoutY="317.0" text="Original Name" />
+      <Label layoutX="711.0" layoutY="373.0" text="New Name" />
+      <Button fx:id="btnDeleteNetwork" disable="true" layoutX="712.0" layoutY="197.0" mnemonicParsing="false" onAction="#deleteNetwork" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="Delete Network" />
+   </children>
+</fx:root>

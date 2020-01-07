@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="530.0" prefWidth="673.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="235.0" layoutY="255.0" prefHeight="25.0" prefWidth="233.0" />
+      <Label layoutX="235.0" layoutY="236.0" text="Name" />
+      <ComboBox fx:id="comboEnterpriseType" layoutX="235.0" layoutY="173.0" prefHeight="25.0" prefWidth="233.0" promptText="Select One" />
+      <Label layoutX="235.0" layoutY="155.0" text="Enterprise Type" />
+      <Button fx:id="btnCreate" alignment="CENTER" defaultButton="true" layoutX="290.0" layoutY="360.0" mnemonicParsing="false" onAction="#createEnterprise" prefHeight="37.0" prefWidth="111.0" style="-fx-background-color: #FF437C; -fx-text-fill: white;" text="Create" />
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="45.0" prefHeight="17.0" prefWidth="673.0" style="-fx-text-fill: #00A1FF; -fx-font-family: 'Segoe UI';" text="CREATE NEW ENTERPRISE" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+   </children>
+</fx:root>

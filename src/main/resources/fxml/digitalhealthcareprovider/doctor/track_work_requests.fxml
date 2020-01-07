@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefWidth="1300.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+        <TableView fx:id="tblAllRequests" layoutX="23.0" layoutY="53.0" prefHeight="388.0" prefWidth="1254.0">
+          <columns>
+            <TableColumn fx:id="colOriginatingNetwork" prefWidth="148.80001068115234" text="Originating Network" />
+            <TableColumn fx:id="colOriginatingEnterprise" prefWidth="164.79998779296875" text="Originating Enterprise" />
+              <TableColumn fx:id="colPatientName" prefWidth="143.20004272460938" text="Patient Name" />
+              <TableColumn fx:id="colSender" prefWidth="135.199951171875" text="Sender" />
+              <TableColumn fx:id="colReceiver" prefWidth="123.20001220703125" text="Receiver" />
+              <TableColumn fx:id="colSentOn" prefWidth="119.20001220703125" text="Sent On" />
+              <TableColumn fx:id="colStatus" prefWidth="101.60003662109375" text="Status" />
+              <TableColumn fx:id="colCompletedOn" prefWidth="128.79986572265625" text="Completed On" />
+            <TableColumn fx:id="colMessage" prefWidth="188.0001220703125" text="Message" />
+          </columns>
+        </TableView>
+        <Button fx:id="btnCancelRequest" disable="true" layoutX="1225.0" layoutY="27.0" mnemonicParsing="false" onAction="#cancelWorkRequest" text="Cancel" />
+
+   </children>
+</fx:root>

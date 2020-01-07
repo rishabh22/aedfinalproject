@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: #efefef;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.neu.javachip.aedfinalproject.ui.login.LoginController">
+   <children>
+      <AnchorPane prefWidth="450.0" style="-fx-background-color: #0061FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="140.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/steth.png" />
+               </image></ImageView>
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="325.0" prefHeight="30.0" prefWidth="450.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15pt;" text="DIGITAL REMOTE HEALTHCARE" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="449.0" layoutY="52.0" prefHeight="54.0" prefWidth="854.0" style="-fx-text-fill: #00A1FF; -fx-font-family: 'Segoe UI';" text="LOGIN">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="751.0" layoutY="155.0" prefHeight="21.0" prefWidth="98.0" style="-fx-text-fill: black;" text="Username:" />
+      <Label layoutX="752.0" layoutY="257.0" style="-fx-text-fill: black;" text="Password:" />
+      <CustomTextField fx:id="txtUserId" layoutX="752.0" layoutY="177.0" prefHeight="46.0" prefWidth="248.0" promptText="Enter Username" />
+      <CustomPasswordField fx:id="pwdPassword" layoutX="751.0" layoutY="275.0" prefHeight="46.0" prefWidth="248.0" promptText="Enter Password" />
+      <Button defaultButton="true" layoutX="881.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="98.0" style="-fx-background-color: #FF437C; -fx-text-fill: white;" text="SUBMIT" />
+      <Button layoutX="772.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleReset" prefHeight="46.0" prefWidth="98.0" style="-fx-background-color: #0087D5; -fx-text-fill: white;" text="RESET" />
+      </children>
+</AnchorPane>

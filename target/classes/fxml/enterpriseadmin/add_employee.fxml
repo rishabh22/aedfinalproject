@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="618.0" prefWidth="800.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutY="32.0" prefHeight="37.0" prefWidth="800.0" style="-fx-font-family: 'Segoe UI'; -fx-text-fill: #00A1FF;" text="CREATE EMPLOYEE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="189.0" text="Full Name" />
+      <Label layoutX="433.0" layoutY="244.0" text="Email" />
+      <Label layoutX="433.0" layoutY="295.0" text="Mobile" />
+      <Label layoutX="431.0" layoutY="132.0" text="Organization" />
+      <TextField fx:id="txtName" layoutX="433.0" layoutY="206.0" prefWidth="233.0" promptText="Enter your name" />
+      <TextField fx:id="txtEmail" layoutX="433.0" layoutY="261.0" prefHeight="25.0" prefWidth="233.0" promptText="Enter your email" />
+      <TextField fx:id="txtMobile" layoutX="433.0" layoutY="312.0" prefHeight="25.0" prefWidth="233.0" promptText="Enter your mobile number" />
+      <ComboBox fx:id="comboOrganizations" layoutX="431.0" layoutY="151.0" prefHeight="25.0" prefWidth="233.0" promptText="Select one" />
+      <Button fx:id="btnUploadImage" layoutX="191.0" layoutY="321.0" mnemonicParsing="false" onAction="#uploadImage" text="Upload Image" />
+      <Button fx:id="btnCreate" defaultButton="true" layoutX="353.0" layoutY="416.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="37.0" prefWidth="111.0" style="-fx-text-fill: white; -fx-background-color: #FF437C;" text="Create" />
+      <AnchorPane fx:id="imgWrapper" layoutX="161.0" layoutY="133.0" style="-fx-border-color: blue; -fx-border-radius: 6;">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="178.0" fitWidth="152.0" pickOnBounds="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

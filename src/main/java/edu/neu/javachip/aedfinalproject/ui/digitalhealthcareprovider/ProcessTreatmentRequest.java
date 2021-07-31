@@ -527,7 +527,9 @@ public class ProcessTreatmentRequest extends AnchorPane {
     private void closeServer() {
         try {
 //            server.stop();
-            chatHandler.closeConnections();
+            if(chatHandler!=null) {
+                chatHandler.closeConnections();
+            }
             btnCloseServer.setDisable(true);
             btnStartServer.setDisable(false);
             txtMessage.setDisable(true);

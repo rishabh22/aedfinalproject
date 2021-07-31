@@ -9,16 +9,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>13</maven.compiler.source>
-        <maven.compiler.target>13</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
-
 
     <build>
 
         <plugins>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.0.0-M1</version>
@@ -39,24 +38,28 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>13</source>
-                    <target>13</target>
+                    <source>16</source>
+                    <target>16</target>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>javafx.graphics/javafx.scene=ALL-UNNAMED</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
+                <version>0.0.6</version>
                 <configuration>
-                    <mainClass>App</mainClass>
+                    <mainClass>edu.neu.javachip.aedfinalproject.App</mainClass>
                 </configuration>
             </plugin>
 
@@ -97,23 +100,22 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13.0.1</version>
+            <version>16</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>13.0.1</version>
+            <version>16</version>
         </dependency>
-
 
 
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>13.0.1</version>
+            <version>16</version>
         </dependency>
 
 
@@ -128,13 +130,21 @@
         <dependency>
             <groupId>org.controlsfx</groupId>
             <artifactId>controlsfx</artifactId>
-            <version>11.0.0</version>
+            <version>11.1.0</version>
         </dependency>
+
+        <!--<dependency>
+            <groupId>com.db4o</groupId>
+            <artifactId>db4o-java5</artifactId>
+            <version>8.0.184.15484</version>
+        </dependency>-->
 
         <dependency>
             <groupId>com.db4o</groupId>
             <artifactId>db4o-java5</artifactId>
             <version>8.0.184.15484</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/db4o-java5-8.0.184.15484.jar</systemPath>
         </dependency>
 
 
@@ -142,7 +152,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
+            <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
 
@@ -158,7 +168,7 @@
         <dependency>
             <groupId>com.sendgrid</groupId>
             <artifactId>sendgrid-java</artifactId>
-            <version>4.4.1</version>
+            <version>4.7.2</version>
         </dependency>
 
 
